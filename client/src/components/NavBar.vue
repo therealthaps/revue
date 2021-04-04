@@ -1,6 +1,7 @@
 <template lang="html">
   <nav>
     <router-link class="title" :to="{ name: 'Home', params: {} }">ReVue</router-link>
+    <router-link class="about-us" :to="{ name: 'AboutUs' }">About the Team</router-link>
     <div class="dropdown">
       <button class="dropbtn">Subvues</button>
       <div class="dropdown-content">
@@ -11,6 +12,7 @@
           >{{ subvue.name }}</router-link>
         <router-link class="create-subvue" :to="{ name: 'CreateSubvue' }">Create a Subvue</router-link>
       </div>
+      
     </div>
 
     <router-link v-if="!$store.state.isUserLoggedIn" style="float:right" :to="{ name: 'SignUp', params: {} }">Sign Up</router-link>
@@ -54,7 +56,13 @@ nav a {
 .title {
   font-weight: bold;
 }
-
+.about-us{
+  background-color: rgb(23, 92, 93);
+  color: white !important;
+}
+.about-us:hover {
+  background-color: rgb(7, 44, 45) !important;
+}
 .create-subvue {
   background-color: rgb(23, 92, 93);
   color: white !important;
