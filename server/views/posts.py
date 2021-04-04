@@ -22,7 +22,12 @@ def posts_create(username: str):
         "subvue": And(str, len, error="Subvue not specified"),
         "content": And(str, len, error="Content not specified"),
     })
-    validated = schema.validate(dict(request.form))
+    form = {
+        "title": request.form.get("title"),
+        "subvue": request.form.get("subvue"),
+        "content": request.form.get("content")
+    }
+    validated = schema.validate(form)
 
     subvue_permalink = validated["subvue"]
     subvue = Subvue.objects(permalink__iexact=subvue_permalink).first()
