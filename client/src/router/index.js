@@ -39,6 +39,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "create" */ '@/views/CreatePost')
   },
   {
+    path: '/about',
+    name: 'AboutUs',
+    component: () => import(/* webpackChunkName: "about" */ '@/views/Aboutus')
+  },
+  {
     path: '/create/subvue',
     name: 'CreateSubvue',
     component: () => import(/* webpackChunkName: "createsubvue" */ '@/views/CreateSubvue')

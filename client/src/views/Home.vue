@@ -15,12 +15,11 @@
 import PostPreview from '@/components/PostPreview'
 import PostsService from '@/services/PostsService'
 import CreateButton from '@/components/CreateButton'
-import Aboutus from '@/components/Aboutus'
 
 export default {
   name: 'home',
 
-  components: { PostPreview, CreateButton, Aboutus },
+  components: { PostPreview, CreateButton },
 
   data() {
     return {
