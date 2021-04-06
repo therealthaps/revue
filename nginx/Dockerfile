@@ -1,6 +1,7 @@
 FROM alpine:latest
 
-LABEL MAINTAINER="Rik Bose <rbose@knox.edu>"
+LABEL MAINTAINER="Abhishek Thapa <abthapa@knox.edus>"
+# LABEL MAINTAINER="Abhishek Thapa <abthapa@knox.edu>"
 
 RUN apk --update add nginx && \
     ln -sf /dev/stdout /var/log/nginx/access.log && \
